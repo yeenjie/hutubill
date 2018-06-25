@@ -1,9 +1,6 @@
 package gui.panel;
-
-import javafx.scene.control.ToolBar;
 import util.CenterPanel;
 import util.GUIUtil;
-
 import javax.swing.*;
 import java.awt.*;
 

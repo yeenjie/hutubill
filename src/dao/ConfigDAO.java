@@ -2,8 +2,6 @@ package dao;
 
 import entity.Config;
 import util.DBUtil;
-import util.GUIUtil;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

@@ -13,8 +13,6 @@ public class MainFrame extends JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setContentPane(MainPanel.instance);
-
-
     }
 
 
