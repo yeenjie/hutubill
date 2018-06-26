@@ -6,7 +6,7 @@ import java.io.File;
 
 public class GUIUtil {
 
-    private static String imageFolder ="E:/project/hutubill/img";
+    private static String imageFolder ="H:/project/hutubill/img";
 
     public static boolean checkEmpty(JTextField tf,String input){
         String text = tf.getText().trim();

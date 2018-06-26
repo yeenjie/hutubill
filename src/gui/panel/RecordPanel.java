@@ -47,9 +47,7 @@ public class RecordPanel extends JPanel{
         pInput.add(tfComment);
         pInput.add(lDate);
         pInput.add(datePicker);
-
         pSubmit.add(bSubmit);
-
         this.setLayout(new BorderLayout());
         this.add(pInput,BorderLayout.NORTH);
         this.add(pSubmit,BorderLayout.CENTER);
