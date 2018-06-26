@@ -6,15 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9591c2d9-5fd6-42e0-8ea5-023c9cc1f686" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/dao/CategoryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_0_8_bin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_0_8_bin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hutubill/gui/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hutubill/gui/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hutubill/util/GUIUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hutubill/util/GUIUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ConfigDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ConfigDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/panel/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/panel/MainPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/GUIUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/GUIUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CategoryDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,10 +136,9 @@
       <file leaf-file-name="CategoryDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dao/CategoryDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+            <state relative-caret-position="56">
+              <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#3182#3183#0" expanded="true" />
                 <element signature="e#3210#3211#0" expanded="true" />
               </folding>
@@ -217,10 +208,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1008" />
-    <option name="width" value="1038" />
-    <option name="height" value="1451" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-12" />
+    <option name="y" value="123" />
+    <option name="width" value="1338" />
+    <option name="height" value="1275" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -456,15 +448,15 @@
       <workItem from="1529038525229" duration="24101000" />
       <workItem from="1529207527441" duration="18057000" />
       <workItem from="1529889597043" duration="1477000" />
-      <workItem from="1529892308515" duration="6956000" />
+      <workItem from="1529892308515" duration="7731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50591000" />
+    <option name="totallyTimeSpent" value="51366000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1372" height="975" extended-state="7" />
+    <frame x="-7" y="82" width="891" height="849" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -476,12 +468,12 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1492891" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17548746" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21156773" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3337335" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1000,10 +992,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/CategoryDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+        <state relative-caret-position="56">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#3182#3183#0" expanded="true" />
             <element signature="e#3210#3211#0" expanded="true" />
           </folding>
