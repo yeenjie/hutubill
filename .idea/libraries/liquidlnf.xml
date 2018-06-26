@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="liquidlnf">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/liquidlnf.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
