@@ -1,4 +1,5 @@
 package gui.panel;
+import gui.listener.ToolBarListener;
 import util.CenterPanel;
 import util.GUIUtil;
 import javax.swing.*;
@@ -43,6 +44,18 @@ public class MainPanel extends JPanel {
         setLayout(new BorderLayout());
         add(tb,BorderLayout.NORTH);
         add(workingPanel,BorderLayout.CENTER);
+        addListener();
+    }
+
+    private void addListener(){
+        ToolBarListener toolBarListener = new ToolBarListener();
+        bSpend.addActionListener(toolBarListener);
+        bBackup.addActionListener(toolBarListener);
+        bCategory.addActionListener(toolBarListener);
+        bConfig.addActionListener(toolBarListener);
+        bRecord.addActionListener(toolBarListener);
+        bRecover.addActionListener(toolBarListener);
+        bReport.addActionListener(toolBarListener);
 
     }
 

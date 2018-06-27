@@ -4,7 +4,6 @@ import util.CircleProgressBar;
 import util.ColorUtil;
 import util.GUIUtil;
 
-import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.swing.*;
 import java.awt.*;
 

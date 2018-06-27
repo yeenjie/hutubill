@@ -42,7 +42,7 @@ public class Record {
     }
 
     public Date getDate() {
-        return date;
+        return this.date;
     }
 
     public void setDate(Date date) {

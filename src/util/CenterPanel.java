@@ -17,6 +17,7 @@ public class CenterPanel extends  JPanel {
     public CenterPanel(double rate){
         this(rate,true);
     }
+
     public void repaint(){
         if(null!=c){
             Dimension containerSize = this.getSize();
