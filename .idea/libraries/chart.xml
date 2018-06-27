@@ -1,10 +1,10 @@
 <component name="libraryTable">
-  <library name="swingx-core-1.6.2">
+  <library name="chart">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/swingx-core-1.6.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.0.8-bin.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/liquidlnf.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/chart.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/liquidlnf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.0.8-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/swingx-core-1.6.2.jar!/" />
       <root url="file://$PROJECT_DIR$" />
     </CLASSES>
     <JAVADOC />
