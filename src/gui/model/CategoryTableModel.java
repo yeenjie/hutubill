@@ -1,5 +1,7 @@
 package gui.model;
 
+import gui.panel.ConfigPanel;
+
 import javax.swing.event.TableModelListener;
 import javax.swing.table.TableModel;
 import java.util.ArrayList;
@@ -66,4 +68,5 @@ public class CategoryTableModel implements TableModel {
     public void removeTableModelListener(TableModelListener l) {
 
     }
+
 }

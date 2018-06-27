@@ -37,6 +37,18 @@ public class ConfigDAO {
         }
     }
 
+    public void update(Config config){
+        String sql ="UPDATE config SET key_ =? , value = ? where id =?";
+        try(Connection c = DBUtil.getConnection();PreparedStatement ps = c.prepareStatement(sql)){
+            ps.setString(2,config.getValue());
+            ps.setString(1,config.getKey());
+            ps.setInt(3,config.getId());
+            ps.execute();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
     public void delete(int id){
         String sql ="DELETE FROM config WHERE id =?";
         try(Connection c = DBUtil.getConnection();PreparedStatement ps = c.prepareStatement(sql)){
@@ -90,11 +102,11 @@ public class ConfigDAO {
         return configs;
     }
 
-    public Config getByKey(int key){
+    public Config getByKey(String key){
         Config config = null;
         String sql ="SELECT * FROM config WHERE KEY_ = ?";
         try(Connection c = DBUtil.getConnection();PreparedStatement ps = c.prepareStatement(sql)) {
-            ps.setInt(1,key);
+            ps.setString(1,key);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 config.id = rs.getInt("id");
