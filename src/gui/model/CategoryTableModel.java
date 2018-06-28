@@ -1,22 +1,25 @@
 package gui.model;
 
-import gui.panel.ConfigPanel;
+import dao.CategoryDAO;
+import entity.Category;
+import service.CategoryService;
 
 import javax.swing.event.TableModelListener;
 import javax.swing.table.TableModel;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryTableModel implements TableModel {
 
     String[] columnNames = new String[]{"分类名称", "消费次数"};
-    List<String> cs = new ArrayList();
+//    List<String> cs = new ArrayList();
+
+    public List<Category> cs = new CategoryService().list();
 
     public CategoryTableModel(){
-        cs.add("餐饮");
-        cs.add("交通");
-        cs.add("住宿");
-        cs.add("话费");
+//        cs.add("餐饮");
+//        cs.add("交通");
+//        cs.add("住宿");
+//        cs.add("话费");
     }
 
     @Override
@@ -46,10 +49,11 @@ public class CategoryTableModel implements TableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
+        Category row = cs.get(rowIndex);
         if(0==columnIndex)
-            return cs.get(rowIndex);
+            return row.getName();
         if(1==columnIndex){
-            return 0;
+            return row.getRecordNumber();
         }
         return null;
     }

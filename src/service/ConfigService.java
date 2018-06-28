@@ -12,7 +12,8 @@ public class ConfigService {
         init();
     }
     public static void init(){
-
+        init(budget,default_budge);
+        init(mysqlPath,"");
     }
 
     private static void init (String key, String value){

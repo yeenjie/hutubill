@@ -75,12 +75,12 @@ public class CategoryDAO {
     public List<Category> list ( int start , int count){
         List<Category> categories = new ArrayList<>();
         String sql = "SELECT * FROM category ORDER BY id DESC LIMIT ?,?";
-        Category category = new Category();
         try(Connection c = DBUtil.getConnection();PreparedStatement ps = c.prepareStatement(sql)){
             ps.setInt(1,start);
             ps.setInt(2,count);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
+                Category category = new Category();
                 category.setId(rs.getInt("id"));
                 category.setName(rs.getString("name"));
                 categories.add(category);

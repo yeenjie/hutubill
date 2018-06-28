@@ -102,16 +102,23 @@ public class ConfigDAO {
         return configs;
     }
 
-    public Config getByKey(String key){
+    public Config getByKey(String key) {
         Config config = null;
-        String sql ="SELECT * FROM config WHERE KEY_ = ?";
-        try(Connection c = DBUtil.getConnection();PreparedStatement ps = c.prepareStatement(sql)) {
-            ps.setString(1,key);
-            ResultSet rs = ps.executeQuery();
-            while(rs.next()){
-                config.id = rs.getInt("id");
-                config.value = rs.getString("value");
-                config.key =rs.getString("key");
+        String sql = "select * from config where key_ = ?" ;
+        try (Connection c = DBUtil.getConnection();
+             PreparedStatement ps = c.prepareStatement(sql);
+        ) {
+
+            ps.setString(1, key);
+            ResultSet rs =ps.executeQuery();
+
+            if (rs.next()) {
+                config = new Config();
+                int id = rs.getInt("id");
+                String value = rs.getString("value");
+                config.key = key;
+                config.value = value;
+                config.id = id;
             }
 
         } catch (SQLException e) {
