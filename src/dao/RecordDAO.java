@@ -119,7 +119,7 @@ public class RecordDAO{
                 Record record = new Record();
                 record.setCid(rs.getInt("id"));
                 record.setDate(rs.getDate("date"));
-                record.setComment(rs.getString("string"));
+                record.setComment(rs.getString("comment"));
                 record.setSpend(rs.getInt("spend"));
                 record.setId(rs.getInt("id"));
                 records.add(record);

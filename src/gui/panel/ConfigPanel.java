@@ -1,6 +1,7 @@
 package gui.panel;
 
 import gui.listener.ConfigListener;
+import service.ConfigService;
 import util.ColorUtil;
 import util.GUIUtil;
 
@@ -8,7 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 
 import javax.swing.JTextField;
-public class ConfigPanel extends JPanel {
+public class ConfigPanel extends WorkingPanel {
     static {
         GUIUtil.useLNF();
     }
@@ -40,6 +41,17 @@ public class ConfigPanel extends JPanel {
         this.add(pInput, BorderLayout.NORTH);
         this.add(pSubmit, BorderLayout.CENTER);
         addListener();
+    }
+
+    @Override
+    public void updateData() {
+        String budget = new ConfigService().get(ConfigService.budget);
+        String mysqlPath = new ConfigService().get(ConfigService.mysqlPath);
+        tfBudget.setText(budget);
+        System.out.println("update"+ConfigService.budget +budget );
+        tfMysqlPath.setText(mysqlPath);
+        tfBudget.grabFocus();
+
     }
 
     public void addListener(){

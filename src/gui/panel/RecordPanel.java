@@ -1,16 +1,19 @@
 package gui.panel;
 
+import entity.Category;
+import gui.listener.RecordListener;
 import gui.model.CategoryComboBoxModel;
 import org.jdesktop.swingx.JXDatePicker;
+import service.CategoryService;
+import service.RecordService;
 import util.ColorUtil;
 import util.GUIUtil;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.util.Date;
 
-public class RecordPanel extends JPanel{
+public class RecordPanel extends WorkingPanel{
     static {
         GUIUtil.useLNF();
     }
@@ -23,9 +26,9 @@ public class RecordPanel extends JPanel{
 
     public JTextField tfSpend= new JTextField("0");
 
-    public JComboBox<String> cbCategory = new JComboBox();
-    public CategoryComboBoxModel cbModel = new CategoryComboBoxModel();
 
+    public CategoryComboBoxModel cbModel = new CategoryComboBoxModel();
+    public JComboBox<String> cbCategory = new JComboBox(cbModel);
     public JTextField tfComment = new JTextField();
     public JXDatePicker datePicker = new JXDatePicker(new Date());
 
@@ -51,12 +54,36 @@ public class RecordPanel extends JPanel{
         this.setLayout(new BorderLayout());
         this.add(pInput,BorderLayout.NORTH);
         this.add(pSubmit,BorderLayout.CENTER);
+        addListener();
     }
 
+    public Category getSelectedItem(){
+        return (Category)cbCategory.getSelectedItem();
+    }
     public static void main(String[] args) {
         GUIUtil.showPanel(RecordPanel.instance);
     }
 
 
+    @Override
+    public void updateData() {
+        System.out.println("cbmd更新了");
+        cbModel.cs = new CategoryService().list();
+        cbCategory.updateUI();
+        tfSpend.grabFocus();
+        reset();
+    }
+    private void reset() {
+            tfSpend.setText("0");
+            tfComment.setText("");
+            if(0!=cbModel.cs.size()){
+                cbCategory.setSelectedIndex(0);
+            }
+            datePicker.setDate(new Date());
+    }
 
+    @Override
+    public void addListener() {
+        bSubmit.addActionListener(new RecordListener());
+    }
 }

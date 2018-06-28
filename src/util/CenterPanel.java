@@ -1,5 +1,7 @@
 package util;
 
+import com.sun.corba.se.spi.orbutil.threadpool.Work;
+import gui.panel.WorkingPanel;
 import javafx.embed.swing.JFXPanel;
 
 import javax.swing.*;
@@ -39,6 +41,9 @@ public class CenterPanel extends  JPanel {
             remove(c);
         }
         add(p);
+        if(p instanceof WorkingPanel){
+            ((WorkingPanel)p).updateData();
+        }
         this.updateUI();
     }
 

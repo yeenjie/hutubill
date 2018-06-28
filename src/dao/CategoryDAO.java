@@ -91,6 +91,8 @@ public class CategoryDAO {
         return categories;
     }
 
+
+
     public List<Category> list(){
         return list(0,Short.MAX_VALUE);
     }

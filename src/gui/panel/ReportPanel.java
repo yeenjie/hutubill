@@ -14,7 +14,7 @@ public class ReportPanel extends JPanel {
     public JLabel l = new JLabel();
     public ReportPanel(){
         this.setLayout(new BorderLayout());
-        Image i = ChartUtil.getImage(400,300);
+        Image i = ChartUtil.getImage(400,280);
         ImageIcon icon = new ImageIcon(i);
         l.setIcon(icon);
         this.add(l);
