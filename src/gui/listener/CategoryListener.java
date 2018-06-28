@@ -28,7 +28,7 @@ public class CategoryListener implements ActionListener {
             int id  = c.getId();
             String name = JOptionPane.showInputDialog("修改分类名称",c.getName());
             if(0 == name.length()){
-                JOptionPane.showMessageDialog(p,"分类名称不能为空");
+                JOptionPane.showMessageDialog(p,"分类名称不能为空 ");
                 return;
             }
             new CategoryService().update(id,name);

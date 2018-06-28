@@ -1,11 +1,12 @@
 package gui.panel;
 
+import gui.listener.BackupListner;
 import util.ColorUtil;
 import util.GUIUtil;
 
 import javax.swing.*;
 
-public class BackupPanel extends JPanel {
+public class BackupPanel extends WorkingPanel {
     static {
         GUIUtil.useLNF();
     }
@@ -14,6 +15,17 @@ public class BackupPanel extends JPanel {
     public BackupPanel(){
         GUIUtil.setColor(ColorUtil.blueColor,bBackup);
         this.add(bBackup);
+        addListener();
+    }
+
+    @Override
+    public void updateData() {
+
+    }
+
+    @Override
+    public void addListener() {
+        bBackup.addActionListener(new BackupListner());
     }
 
     public static void main(String[] args) {
