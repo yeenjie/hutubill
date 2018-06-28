@@ -23,6 +23,7 @@ public class DateUtil {
         return c.getTime();
     }
 
+
     public static Date monthBegin(){
         Calendar c =Calendar.getInstance();
         c.setTime(new Date());
@@ -52,6 +53,15 @@ public class DateUtil {
         long lastDayMilliSeconds = monthEnd().getTime();
         long toDayMilliSeconds = today().getTime();
         return (int) ((lastDayMilliSeconds-toDayMilliSeconds)/millisecondsOfOneDay)+1;
+    }
+
+    public static int thisMonthTotalDay(){
+        long lastDayMillSeconds = monthEnd().getTime();
+        long firstDayMillSeconds = monthBegin().getTime();
+        System.out.println("ls m"+lastDayMillSeconds/millisecondsOfOneDay);
+        System.out.println("fs m"+firstDayMillSeconds/millisecondsOfOneDay);
+        System.out.println((int)((lastDayMillSeconds-firstDayMillSeconds)*1.0/lastDayMillSeconds)+1);
+        return (int)(lastDayMillSeconds/millisecondsOfOneDay-firstDayMillSeconds/millisecondsOfOneDay);
     }
 
     public static void main(String[] args) {

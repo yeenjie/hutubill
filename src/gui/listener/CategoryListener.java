@@ -15,7 +15,8 @@ public class CategoryListener implements ActionListener {
         CategoryPanel p = CategoryPanel.instance;
         JButton b = (JButton) e.getSource();
         if(b == p.bAdd){
-            String name = JOptionPane.showInputDialog(null);
+            String name = "";   
+            name = JOptionPane.showInputDialog(null);
             if(0 == name.length()){
                 JOptionPane.showMessageDialog(p,"分类名不能为空");
                 return;

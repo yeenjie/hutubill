@@ -42,7 +42,7 @@ public class CategoryPanel extends JPanel {
 
     public void updateDate(){
         categoryTableModel.cs = new CategoryService().list();
-
+        table = new JTable(categoryTableModel);
         table.updateUI();
         table.getSelectionModel().setSelectionInterval(0,0);
         if(0 == categoryTableModel.cs.size()){
