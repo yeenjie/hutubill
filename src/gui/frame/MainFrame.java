@@ -1,4 +1,4 @@
-package gui;
+package gui.frame;
 
 import gui.panel.MainPanel;
 
